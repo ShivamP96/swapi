@@ -7,8 +7,6 @@ import Vehicles from "./Cards/Vehicles";
 import Starships from "./Cards/StarShips";
 
 function CardItem(props) {
-  // Added the category when we got the data from the api
-  // so that its possible to use different cards
   switch (props.data.category) {
     case "people":
       return <People data={props.data} />;

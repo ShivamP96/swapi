@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import CardItem from "./CardItem";
 
 export default function BasicCard(props) {
-  // film doesn't use a name, it uses a title so we need to choose here
   const title = props.data.name ?? props.data.title ?? "N/A";
 
   return (
