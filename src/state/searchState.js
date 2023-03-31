@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { AbortSearch, searchAPI } from "../services/searchAPI";
+import { usePaginationState } from "./paginationState";
 
 export const useSearchState = create((set, get) => ({
   loading: false,
@@ -21,19 +22,6 @@ export const useSearchState = create((set, get) => ({
         set({ results, loading: false });
       }
     }
+    usePaginationState.getState().updateResults(get().results);
   },
 }));
-
-/* This is the main state control, we import our service searchAPI here to that
- so that it can be used to fill the query state
-
-this state management is made using Zustand (flux)
-this hook called useSearchState, we can put anything inside like primitives, objects, functions etc...
-
-the set fuction helps us merge state
-
-we can write our code using json notation/object notation makes it easy with anon functions
-
-
-
-*/

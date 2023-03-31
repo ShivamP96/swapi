@@ -5,10 +5,6 @@ const app = express();
 const port = 8000;
 app.use(cors());
 
-app.get("/api", (req, res) => {
-  res.send("Hello World!");
-});
-
 app.get("/api/search/:query", async (req, res) => {
   const query = req.params.query;
   const categories = [

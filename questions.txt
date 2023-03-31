@@ -1,6 +1,0 @@
-TODO:
-2. Google Pagination try to get it working
-3. Implement Authentication
-4. Setup MongoDB to save images???
-
-
